@@ -17,8 +17,8 @@ set_property CUSTOMIZED_DEFAULT_IP_LOCATION ./ [current_project]
 #read_ip ../source/test_bram/test_bram.xci
 #read_ip ../source/top_ila/top_ila.xci
 
-#upgrade_ip -quiet  [get_ips *]
-#generate_target {all} [get_ips *]
+upgrade_ip -quiet  [get_ips *]
+generate_target {all} [get_ips *]
 
 source ../source/system.tcl
 generate_target {synthesis implementation} [get_files ./proj.srcs/sources_1/bd/system/system.bd]
