@@ -1,0 +1,17 @@
+/include/ "system-conf.dtsi"
+/ {
+};
+
+&axi_ethernetlite_0 {
+  local-mac-address = [00 0a 35 00 01 22];
+  phy-handle = <&phy0>;
+  xlnx,has-mdio = <0x1>;
+  mdio {
+    #address-cells = <1>;
+    #size-cells = <0>;
+    phy0: phy@1 {
+      device_type = "ethernet-phy";
+      reg = <1>;
+    };
+  };
+};
